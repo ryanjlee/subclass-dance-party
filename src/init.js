@@ -21,7 +21,7 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
     if(dancerMakerFunction === 'CuddlePuddle') {
-      totalCuddlers +=1;
+      window.totalCuddlers +=1;
     }
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
@@ -35,6 +35,16 @@ $(document).ready(function(){
     for (var i = 0; i < dancers.length; i++) {
       dancers[i].left = 10;
       dancers[i].setPosition(dancers[i].top, 10);
+    }
+  });
+
+  //first iteration: when moused over, the hulk will grow huge and wipe out all other dancers on the screen
+  //second iteration: just knock out the closest dancer
+
+  $("body").on("mouseenter", ".Hulk", function(event) {
+    $(this).addClass("angryHulk");
+    for(var i = 0; i < window.dancers.length; i++) {
+      dancers[i].$node.remove();
     }
   });
 

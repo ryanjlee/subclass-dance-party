@@ -42,6 +42,9 @@ body, a:link, a:visited, a:active{
   border:30px solid red;
   border-radius:30px;
 }
+.Hulk {
+  background-color:red;
+}
 .largeHulk {
   border:70px solid green;
   border-radius:30px;
@@ -49,4 +52,8 @@ body, a:link, a:visited, a:active{
 .smallHulk {
   border:50px solid green;
   border-radius:30px;
+}
+.angryHulk {
+  border:800px solid green;
+  border-radius:60px;
 }
