@@ -1,6 +1,6 @@
 var LineDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass("LineDancer");
+  this.$node.addClass("lineDancer");
   this.counter = 0;
   this.minLeft = left;
   this.maxLeft = left;
