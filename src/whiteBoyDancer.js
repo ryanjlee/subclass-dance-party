@@ -17,5 +17,5 @@ WhiteBoyDancer.prototype.step = function() {
     this.left -= 25;
   }
   this.rightOrLeft = !this.rightOrLeft;
-  //setPosition
+  this.setPosition(this.top, this.left);
 }
