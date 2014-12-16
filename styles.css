@@ -30,3 +30,7 @@ body, a:link, a:visited, a:active{
   border:10px solid white;
   border-radius:10px;
 }
+.itsRainingMenDancer {
+  border: 10px solid blue;
+  border-radius: 10px;
+}
