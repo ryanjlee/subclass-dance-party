@@ -21,7 +21,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid green;
   border-radius:10px;
   position:absolute;
 }
@@ -33,4 +33,12 @@ body, a:link, a:visited, a:active{
 .itsRainingMenDancer {
   border: 10px solid blue;
   border-radius: 10px;
+}
+.lineDancer {
+  border:20px solid orange;
+  border-radius: 20px;
+}
+.cuddlePuddle {
+  border:30px solid red;
+  border-radius:30px;
 }
