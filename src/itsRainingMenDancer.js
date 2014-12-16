@@ -12,8 +12,8 @@ ItsRainingMenDancer.prototype.step = function(){
   this.oldStep();
   this.top += 20;
   this.setPosition(this.top, this.left);
-  setTimeout(function() {
-    this.top -= 20;
-    this.setPosition(this.top, this.left);
-  }, 100);
+  // setTimeout(function() {
+  //   this.top -= 20;
+  //   this.setPosition(this.top, this.left);
+  // }, 100);
 };

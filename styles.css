@@ -5,10 +5,16 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url(http://www.sicoinc.com/images/dancefloors/Cam-Lam22.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton, .lineUp{
   padding:5px 12px;
   float:right;
@@ -31,8 +37,10 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
 }
 .itsRainingMenDancer {
-  border: 10px solid blue;
-  border-radius: 10px;
+  border: 0;
+  width:227px;
+  height:200px;
+  background:url(http://www.picgifs.com/sport-graphics/sport-graphics/skydiving/sport-graphics-skydiving-183692.gif);
 }
 .lineDancer {
   border:20px solid orange;
