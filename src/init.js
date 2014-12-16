@@ -28,5 +28,14 @@ $(document).ready(function(){
     );
     $('body').append(dancer.$node);
   });
+
+  $(".lineUp").on("click", function(event) {
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].left = 10;
+      dancers[i].setPosition(dancers[i].top, 10);
+    }
+  });
+
+
 });
 

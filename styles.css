@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUp{
   padding:5px 12px;
   float:right;
 }
@@ -29,5 +29,4 @@ body, a:link, a:visited, a:active{
 .whiteBoyDancer {
   border:10px solid white;
   border-radius:10px;
-  position:absolute;
 }

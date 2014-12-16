@@ -1,7 +1,7 @@
 var WhiteBoyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.rightOrLeft = true;
-  this.$node = $('<span class = "whiteBoyDancer dancer"></span>')
+  this.$node.addClass("whiteBoyDancer");
 };
 
 WhiteBoyDancer.prototype = Object.create(Dancer.prototype);
@@ -18,4 +18,4 @@ WhiteBoyDancer.prototype.step = function() {
   }
   this.rightOrLeft = !this.rightOrLeft;
   this.setPosition(this.top, this.left);
-}
+};
