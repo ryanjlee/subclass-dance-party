@@ -1,11 +1,24 @@
 var CuddlePuddle = function(top, left, timeBetweenSteps){
-  timeBetweenSteps = timeBetweenSteps*3 + 500;
+  timeBetweenSteps = timeBetweenSteps*3 + 500
   Dancer.call(this, top, left, timeBetweenSteps);
-   this.$node.addClass("cuddlePuddle");
+  this.nearest5 = [];
+  this.nearest5Height;
+  this.nearest5Left;
+  totalCuddlers+=1;
+  //figure out which collection of cuddlers this one belongs to
+  this.cuddleNum = Math.floor(totalCuddlers/8);
+  if(CuddlePuddle.prototype.puddles[this.cuddleNum] === undefined) {
+    CuddlePuddle.prototype.puddles[this.cuddleNum] = [];
+  }
+  //push this cuddler into it's array of cuddlers
+  CuddlePuddle.prototype.puddles[this.cuddleNum].push(this);
+  this.$node.addClass("cuddlePuddle");
+
 };
 
 CuddlePuddle.prototype = Object.create(Dancer.prototype);
 CuddlePuddle.prototype.constructor = CuddlePuddle;
+CuddlePuddle.prototype.puddles = [];
 
 CuddlePuddle.prototype.oldStep = Dancer.prototype.step;
 CuddlePuddle.prototype.step = function(){
@@ -13,12 +26,7 @@ CuddlePuddle.prototype.step = function(){
   //check for group inclusion before doing anything!
   // make them move really slowly
   this.oldStep();
-  var cuddleMembers = [];
-  for (var i = 0; i < window.dancers.length; i++) {
-    if(window.dancers[i].constructor === CuddlePuddle) {
-      cuddleMembers.push(window.dancers[i]);
-    }
-  }
+  var cuddleMembers = CuddlePuddle.prototype.puddles[this.cuddleNum];
   var midTop;
   var midLeft;
   var midTime;
