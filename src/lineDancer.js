@@ -16,7 +16,7 @@ LineDancer.prototype.step = function(){
 
   this.counter++;
   //every fifth beat, recruit nearby dancers
-  if(this.counter % 5=== 0) {
+  if(this.counter % 5 === 0) {
     for (var i = 0; i < window.dancers.length; i++) {
       var recruitLeft = dancers[i].left;
       var heightEligible = false;

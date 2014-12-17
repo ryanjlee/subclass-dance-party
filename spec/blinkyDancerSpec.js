@@ -1,4 +1,5 @@
 describe("blinkyDancer", function() {
+  window.dancers = [];
 
   var blinkyDancer;
   var timeBetweenSteps = 100;
