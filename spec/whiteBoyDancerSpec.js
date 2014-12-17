@@ -16,7 +16,7 @@ describe("whiteBoyDancer", function() {
   it("should have a step function that moves it's position", function() {
     sinon.spy(whiteBoyDancer, 'setPosition');
     whiteBoyDancer.step();
-    expect(whiteBoyDancer.$node.toggle.called).to.be.true;
+    expect(whiteBoyDancer.setPosition.called).to.be.true;
   });
 
   describe("dance", function(){
