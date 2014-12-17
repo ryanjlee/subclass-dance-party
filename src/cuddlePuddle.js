@@ -46,21 +46,21 @@ CuddlePuddle.prototype.step = function(){
 
   //as it's written now, it might be asymptotic.
   //see if we should be moving by an absolute 10 px, rather than a relative topDistance/10
-  if(Math.abs(topDistance) > 10) {
+  if(Math.abs(topDistance) > 40) {
     this.top += topDistance/totalSteps;
   }
-  if(Math.abs(leftDistance) > 10) {
+  if(Math.abs(leftDistance) > 40) {
     this.left += leftDistance/totalSteps;
   }
 
   this.setPosition(this.top, this.left);
-  if(totalDistance < 10) {
+  if(totalDistance < 50) {
     this.timeBetweenSteps = midTime;
     window.clearTimeout(this.setTimeoutTimer);
     CuddlePuddle.prototype.step.call(this);
   }
   this.timeBetweenSteps += timeDistance/10;
 
-  //this.$node.toggle();
+  this.$node.toggle();
 
 };
